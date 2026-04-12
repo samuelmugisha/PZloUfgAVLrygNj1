@@ -83,10 +83,10 @@ The solution tackles a real-world hiring challenge:
 
 
 ---
-🔄   **End-to-End Workflow**
+## 🔄  End-to-End Workflow
 
   1. 📥 Data Ingestion
-Input candidate data:
+  Input candidate data:
 -  id
 -  job_title
 -  location
@@ -153,6 +153,8 @@ Transformer embeddings
 (Optional) LLM-based encoding
 Compared against candidate representations
 Semantic similarity is computed
+
+
 6. 📊 Ranking Engine
 
 Final ranking score combines:
@@ -193,8 +195,7 @@ Percentile cutoffs
 
 ---
 
----
-Final output:
+## Final output:
 
 High-quality ranked candidate list
 📈 Evaluation Approach
@@ -204,7 +205,8 @@ Reduction in manual review time
 Semantic matching quality (LLM vs keyword baseline)
 
 ---
-⚠️ Challenges & Considerations
+
+## ⚠️ Challenges & Considerations
 Noisy and inconsistent job titles
 Ambiguity in role definitions
 Bias introduced via human feedback
@@ -212,7 +214,7 @@ Balancing semantic vs keyword matching
 Generalization across job domains
 
 ---
-💡 Key Insights
+## 💡 Key Insight
 Transformer embeddings dramatically improve matching quality
 LLMs help capture nuanced job title meaning beyond keywords
 Hybrid systems (TF-IDF + Transformers + ML) outperform single approaches
@@ -220,35 +222,37 @@ Human feedback is critical for continuous improvement
 Ranking systems benefit more from iteration than complexity alone
 
 ---
-🛠️ Tech Stack
-Python
-Scikit-learn
-Pandas / NumPy
-Sentence Transformers / BERT models
-LLM-based embedding techniques
-NLP (TF-IDF, semantic similarity)
+## 🛠️ Tech Stack
+- Python
+- Scikit-learn
+- Pandas / NumPy
+- Sentence Transformers / BERT models
+- LLM-based embedding techniques
+- NLP (TF-IDF, semantic similarity)
 
 ---
-📌 Future Improvements
-Fine-tune transformer models on hiring data
-Use advanced ranking models (LambdaMART, XGBoost Ranker)
-Real-time feedback integration
-Add explainability (feature importance, SHAP)
-Deploy as an API for ATS integration
+## 📌 Future Improvements
+- Fine-tune transformer models on hiring data
+- Use advanced ranking models (LambdaMART, XGBoost Ranker)
+- Real-time feedback integration
+- Add explainability (feature importance, SHAP)
+- Deploy as an API for ATS integration
 
 ---
-🙌 Conclusion
+## 🙌 Conclusion
 
 This project demonstrates my ability to:
 
-Design end-to-end AI systems for real-world problems
-Combine:
+- Design end-to-end AI systems for real-world problems
+
+- Combine:
 Machine Learning
 Transformers
 LLMs
 Human feedback loops
 Build systems that are adaptive, scalable, and intelligent
 ---
+
 From a hiring perspective, this project highlights:
 
 ✔ Strong ML + NLP + LLM integration skills
@@ -260,4 +264,4 @@ From a hiring perspective, this project highlights:
 👤 Author
 
 Samuel Mugisha
-Machine Learning | AI Systems | Digital Health & SaaS
+Machine Learning | AI Systems 
