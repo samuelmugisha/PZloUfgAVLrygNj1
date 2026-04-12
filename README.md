@@ -6,7 +6,8 @@ This project develops a sophisticated, machine learning-powered pipeline designe
 
 The solution addresses challenges such as improving ranking accuracy, incorporating human feedback, filtering candidates effectively, and mitigating bias. By combining lexical and semantic understanding of job titles with other candidate attributes and an adaptive 'fit' scoring mechanism, this system provides a robust and intelligent tool for efficient talent acquisition.
 
-<img src='notebooks/TalentArchitecture.png'>
+<center><img src="notebooks/TalentArchitecture.png" width="800" height="500"></center>
+
 
 ## Key Features
 
