@@ -85,27 +85,27 @@ The solution tackles a real-world hiring challenge:
 ---
 ## 🔄  End-to-End Workflow
 
-  1. 📥 Data Ingestion
-  Input candidate data:
+**1. 📥 Data Ingestion**
+Input candidate data:
 -  id
 -  job_title
 -  location
 -  connections
 
-2. 🧹 Data Preprocessing & Feature Engineering
+**2. 🧹 Data Preprocessing & Feature Engineering**
 🔤 Text Processing
 - Normalize and clean job titles
 - Tokenization and text standardization
   
-🧠 Vectorization (Core Innovation)
+**3. 🧠 Vectorization (Core Innovation)**
 
 The system uses hybrid text representations:
 
-1. TF-IDF (Lexical Matching)
+A. TF-IDF (Lexical Matching)
 - Captures keyword-level similarity
 - Useful for exact matches like “HR Intern”
 
-2. Transformer-based Embeddings
+B. Transformer-based Embeddings
 - Generated using models like:
 - Sentence Transformers
 - BERT-like architectures
@@ -114,7 +114,7 @@ The system uses hybrid text representations:
 Example:
 “Talent Acquisition Intern” ≈ “HR Intern”
 
-3. LLM-powered Representations (Advanced Layer)
+C. LLM-powered Representations (Advanced Layer)
 
 - Large Language Models enhance:
 - Context understanding
@@ -124,25 +124,21 @@ Example:
 
 👉 This hybrid approach significantly improves candidate matching accuracy.
 
-4. 🧾 Feature Store
-
+**4. 🧾 Feature Store**
 All features are combined into a unified feature matrix:
-
 - TF-IDF vectors
 - Transformer embeddings
 - Location features
 - Connections (numeric)
   
-5. 🤖 Machine Learning Model
+**5. 🤖 Machine Learning Model**
 Model: Random Forest Regressor
 Target: fit score (0–1)
-
 The model learns:
-
 Which features indicate strong candidate-role alignment
 Patterns from historical selections and feedback
-5. 🔍 Query Processing & Semantic Matching
 
+**6. 🔍 Query Processing & Semantic Matching**
 Example query:
 
 "Aspiring Human Resources"
@@ -154,55 +150,47 @@ Transformer embeddings
 Compared against candidate representations
 Semantic similarity is computed
 
-
-6. 📊 Ranking Engine
+**7. 📊 Ranking Engine**
 
 Final ranking score combines:
-
-Final Score = Similarity Score + (ML Fit Score × Weight)
+> *Final Score = Similarity Score + (ML Fit Score × Weight)*
 
 Where:
-
 Similarity comes from Transformer + TF-IDF matching
 Fit score comes from ML predictions
-7. ⭐ Human Feedback Loop (Key Innovation)
+
+**8. ⭐ Human Feedback Loop (Key Innovation)**
 Recruiter reviews candidates
 “Stars” an ideal candidate
-
 This acts as:
-
 A supervisory signal defining what a “good candidate” looks like
 
-8. 🔁 Dynamic Re-Ranking (Learning from Feedback)
-
+**9. 🔁 Dynamic Re-Ranking (Learning from Feedback)**
 After a candidate is starred:
-
 The system:
-Learns from the selected profile
-Identifies similar candidates using embeddings
-The model is retrained or adjusted
-Ranking updates dynamically
+- Learns from the selected profile
+- Identifies similar candidates using embeddings
+- The model is retrained or adjusted
+- Ranking updates dynamically
 
 👉 This transforms the system from static ranking → adaptive intelligence
 
-9. 🎯 Filtering & Output
-
+**10. 🎯 Filtering & Output**
 Candidates are filtered using:
-
-Score thresholds
-Top-N selection
-Percentile cutoffs
+- Score thresholds
+- Top-N selection
+- Percentile cutoffs
 
 ---
 
 ## Final output:
 
-High-quality ranked candidate list
-Evaluation Approach
-Ranking accuracy (top candidates relevance)
-Improvement after feedback loops
-Reduction in manual review time
-Semantic matching quality (LLM vs keyword baseline)
+- High-quality ranked candidate list
+- Evaluation Approach
+- Ranking accuracy (top candidates relevance)
+- Improvement after feedback loops
+- Reduction in manual review time
+- Semantic matching quality (LLM vs keyword baseline)
 
 ---
 
@@ -216,11 +204,12 @@ These metrics indicate a strong predictive performance, with the model explainin
 Upon comparing the combined scores (cosine similarity + weighted ML fit) for the query "Human Resources":
 
 - TF-IDF + ML Fit: Consistently yielded the lowest combined scores (e.g., "Aspiring Human Resources Specialist" at 0.8496). This method, based on lexical matching, struggles with semantic nuances and often misses relevant candidates that do not contain exact keywords.
-Transformer (MiniLM) + ML Fit: Showed significantly higher scores (e.g., "Aspiring Human Resources Specialist" at 1.2744). This model excels at capturing contextual and semantic meaning, leading to more accurate and comprehensive identification of relevant job titles.
+  
+- Transformer (MiniLM) + ML Fit: Showed significantly higher scores (e.g., "Aspiring Human Resources Specialist" at 1.2744). This model excels at capturing contextual and semantic meaning, leading to more accurate and comprehensive identification of relevant job titles.
 
 - LLM (paraphrase) + ML Fit: Also produced high scores (e.g., "Aspiring Human Resources Specialist" at 1.1467), demonstrating strong semantic understanding, particularly for paraphrased or related terms. For this specific query, the general-purpose all-MiniLM-L6-v2 performed slightly better than paraphrase-MiniLM-L6-v2 for the top results.
 
-Key Insight: Transformer and LLM-based approaches provide superior semantic understanding compared to TF-IDF, leading to higher relevance scores and the ability to identify a broader, more nuanced set of potential candidates, even when job titles use varied phrasing. This enhanced semantic understanding is crucial for effective talent sourcing.
+**Key Insight:** Transformer and LLM-based approaches provide superior semantic understanding compared to TF-IDF, leading to higher relevance scores and the ability to identify a broader, more nuanced set of potential candidates, even when job titles use varied phrasing. This enhanced semantic understanding is crucial for effective talent sourcing.
 
 ## ⚠️ Challenges & Considerations
 - Noisy and inconsistent job titles
@@ -261,12 +250,8 @@ This project demonstrates my ability to:
 
 - Design end-to-end AI systems for real-world problems
 
-- Combine:
-Machine Learning
-Transformers
-LLMs
-Human feedback loops
-Build systems that are adaptive, scalable, and intelligent
+- Combine: Machine Learning | Transformers | LLMs | Human feedback loops
+- Build systems that are adaptive, scalable, and intelligent
 ---
 
 From a hiring perspective, this project highlights:
