@@ -12,11 +12,11 @@
 
 ## 📌 Project Overview
 
-This project was developed as part of the **Apziva Machine Learning Program**, where the objective was to design an intelligent system to **identify, rank, and continuously improve candidate selection** for specific job roles.
+This project objective was to design an intelligent system to **identify, rank, and continuously improve candidate selection** for specific job roles.
 
 The solution tackles a real-world hiring challenge:
 
-How can we automatically identify the best candidates for a role and continuously improve rankings using human feedback?
+**How can we automatically identify the best candidates for a role and continuously improve rankings using human feedback?**
 
 To solve this, the system leverages a combination of:
 
@@ -62,14 +62,14 @@ The solution tackles a real-world hiring challenge:
 
 ## 🔄 Workflow
 
-1. Data ingestion (candidate profiles)
-2. Preprocessing (cleaning, normalization)
-3. Feature engineering (TF-IDF + embeddings)
-4. ML model training (Random Forest)
-5. Query processing (semantic matching)
-6. Ranking (combined scoring)
-7. Human feedback (starring)
-8. Re-ranking (adaptive learning)
+  1. Data ingestion (candidate profiles)
+  2. Preprocessing (cleaning, normalization)
+  3. Feature engineering (TF-IDF + embeddings)
+  4. ML model training (Random Forest)
+  5. Query processing (semantic matching)
+  6. Ranking (combined scoring)
+  7. Human feedback (starring)
+  8. Re-ranking (adaptive learning)
 
 ---
 
@@ -81,80 +81,59 @@ The solution tackles a real-world hiring challenge:
 - Sentence Transformers / BERT
 - LLM-based embeddings
 
----
-
-## 📈 Key Insight
-
-Combining **Transformers + LLMs + ML + Human Feedback** creates a powerful adaptive ranking system for talent sourcing.
 
 ---
+🔄   **End-to-End Workflow**
 
-## 🙌 Conclusion
-
-This project demonstrates strong capabilities in:
-
-- ML system design
-- NLP & semantic understanding
-- Ranking systems
-- Human-in-the-loop AI
-
----
-
-## 👤 Author
-
-**Samuel Mugisha**
-
-
-
----
-🔄 End-to-End Workflow
-1. 📥 Data Ingestion
+  1. 📥 Data Ingestion
 Input candidate data:
-id
-job_title
-location
-connections
+-  id
+-  job_title
+-  location
+-  connections
+
 2. 🧹 Data Preprocessing & Feature Engineering
 🔤 Text Processing
-Normalize and clean job titles
-Tokenization and text standardization
+- Normalize and clean job titles
+- Tokenization and text standardization
+  
 🧠 Vectorization (Core Innovation)
 
 The system uses hybrid text representations:
 
 1. TF-IDF (Lexical Matching)
-
-Captures keyword-level similarity
-Useful for exact matches like “HR Intern”
+- Captures keyword-level similarity
+- Useful for exact matches like “HR Intern”
 
 2. Transformer-based Embeddings
-
-Generated using models like:
-Sentence Transformers
-BERT-like architectures
-Captures semantic meaning
+- Generated using models like:
+- Sentence Transformers
+- BERT-like architectures
+- Captures semantic meaning
+- 
 Example:
 “Talent Acquisition Intern” ≈ “HR Intern”
 
 3. LLM-powered Representations (Advanced Layer)
 
-Large Language Models enhance:
-Context understanding
-Role similarity
-Ambiguous title interpretation
-Helps bridge gaps where keywords fail
+- Large Language Models enhance:
+- Context understanding
+- Role similarity
+- Ambiguous title interpretation
+- Helps bridge gaps where keywords fail
 
 👉 This hybrid approach significantly improves candidate matching accuracy.
 
-3. 🧾 Feature Store
+4. 🧾 Feature Store
 
 All features are combined into a unified feature matrix:
 
-TF-IDF vectors
-Transformer embeddings
-Location features
-Connections (numeric)
-4. 🤖 Machine Learning Model
+- TF-IDF vectors
+- Transformer embeddings
+- Location features
+- Connections (numeric)
+  
+5. 🤖 Machine Learning Model
 Model: Random Forest Regressor
 Target: fit score (0–1)
 
