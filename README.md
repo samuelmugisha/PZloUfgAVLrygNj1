@@ -59,30 +59,6 @@ The solution tackles a real-world hiring challenge:
 ![System Design Diagram](assets/images/system-design-diagram.jpeg)
 
 ---
-
-## 🔄 Workflow
-
-  1. Data ingestion (candidate profiles)
-  2. Preprocessing (cleaning, normalization)
-  3. Feature engineering (TF-IDF + embeddings)
-  4. ML model training (Random Forest)
-  5. Query processing (semantic matching)
-  6. Ranking (combined scoring)
-  7. Human feedback (starring)
-  8. Re-ranking (adaptive learning)
-
----
-
-## 🛠️ Tech Stack
-
-- Python
-- Scikit-learn
-- Pandas / NumPy
-- Sentence Transformers / BERT
-- LLM-based embeddings
-
-
----
 ## 🔄  End-to-End Workflow
 
 **1. 📥 Data Ingestion**
