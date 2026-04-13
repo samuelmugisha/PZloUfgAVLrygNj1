@@ -70,62 +70,64 @@ Input candidate data:
 -  connections
 
 **2. 🧹 Data Preprocessing & Feature Engineering**
-🔤 Text Processing
+**Text Processing**
 - Normalize and clean job titles
 - Tokenization and text standardization
+**Connection Handling:**
+- The `connection` column is cleaned by converting '500+' entries to 500 and casting the column to an integer type, making it numerically usable.
+**Location One-Hot Encoding:**
+- The categorical `location` column is transformed using `OneHotEncoder` into a set of binary features, allowing the model to incorporate geographical information.
   
 **3. 🧠 Vectorization (Core Innovation)**
 
 The system uses hybrid text representations:
 
-A. TF-IDF (Lexical Matching)
-- Captures keyword-level similarity
-- Useful for exact matches like “HR Intern”
+  A. TF-IDF (Lexical Matching)
+    - Captures keyword-level similarity
+    - Useful for exact matches like “HR Intern”
 
-B. Transformer-based Embeddings
-- Generated using models like:
-- Sentence Transformers
-- BERT-like architectures
-- Captures semantic meaning
-- 
+  B. Transformer-based Embeddings
+    - Generated using models like:
+    - Sentence Transformers
+    - BERT-like architectures
+    - Captures semantic meaning
+    
 Example:
 “Talent Acquisition Intern” ≈ “HR Intern”
 
-C. LLM-powered Representations (Advanced Layer)
-
-- Large Language Models enhance:
-- Context understanding
-- Role similarity
-- Ambiguous title interpretation
-- Helps bridge gaps where keywords fail
+  C. LLM-powered Representations (Advanced Layer)
+    - Large Language Models enhance:
+    - Context understanding
+    - Role similarity
+    - Ambiguous title interpretation
+    - Helps bridge gaps where keywords fail
 
 👉 This hybrid approach significantly improves candidate matching accuracy.
 
 **4. 🧾 Feature Store**
-All features are combined into a unified feature matrix:
-- TF-IDF vectors
-- Transformer embeddings
-- Location features
-- Connections (numeric)
-  
+  All features are combined into a unified feature matrix:
+    - TF-IDF vectors
+    - Transformer embeddings
+    - Location features
+    - Connections (numeric)
+ 
 **5. 🤖 Machine Learning Model**
-Model: Random Forest Regressor
-Target: fit score (0–1)
-The model learns:
-Which features indicate strong candidate-role alignment
-Patterns from historical selections and feedback
+    Model: Random Forest Regressor
+    Target: fit score (0–1)
+    The model learns:
+    Which features indicate strong candidate-role alignment
+    Patterns from historical selections and feedback
 
 **6. 🔍 Query Processing & Semantic Matching**
 Example query:
-
-"Aspiring Human Resources"
-Processing Steps:
-Query is encoded using:
-TF-IDF
-Transformer embeddings
-(Optional) LLM-based encoding
-Compared against candidate representations
-Semantic similarity is computed
+        "Aspiring Human Resources"
+        Processing Steps:
+        Query is encoded using:
+        TF-IDF
+        Transformer embeddings
+        (Optional) LLM-based encoding
+        Compared against candidate representations
+        Semantic similarity is computed
 
 **7. 📊 Ranking Engine**
 
