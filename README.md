@@ -144,12 +144,14 @@ Similarity comes from Transformer + TF-IDF matching
 Fit score comes from ML predictions
 
 **8. ⭐ Human Feedback Loop (Key Innovation)**
+
 Recruiter reviews candidates
 “Stars” an ideal candidate
 This acts as:
 A supervisory signal defining what a “good candidate” looks like
 
 **9. 🔁 Dynamic Re-Ranking (Learning from Feedback)**
+
 After a candidate is starred:
 The system:
 - Learns from the selected profile
@@ -160,6 +162,7 @@ The system:
 👉 This transforms the system from static ranking → adaptive intelligence
 
 **10. 🎯 Filtering & Output**
+
 Candidates are filtered using:
 - Score thresholds
 - Top-N selection
