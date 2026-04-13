@@ -107,6 +107,7 @@ Example:
 👉 This hybrid approach significantly improves candidate matching accuracy.
 
 **4. 🧾 Feature Store**
+
   All features are combined into a unified feature matrix:
     - TF-IDF vectors
     - Transformer embeddings
@@ -114,6 +115,7 @@ Example:
     - Connections (numeric)
  
 **5. 🤖 Machine Learning Model**
+
     Model: Random Forest Regressor
     Target: fit score (0–1)
     The model learns:
@@ -121,6 +123,7 @@ Example:
     Patterns from historical selections and feedback
 
 **6. 🔍 Query Processing & Semantic Matching**
+
 Example query:
         "Aspiring Human Resources"
         Processing Steps:
