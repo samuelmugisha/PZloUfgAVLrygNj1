@@ -172,21 +172,26 @@ Candidates are filtered using:
 ---
 
 ## 📈 Performance Benchmarks
-**Machine Learning Model (RandomForestRegressor)**
+**✅ Machine Learning Model (RandomForestRegressor)**
 - R-squared (R2) Score: 0.8384
 - Root Mean Squared Error (RMSE): 0.0392
 These metrics indicate a strong predictive performance, with the model explaining approximately 83.84% of the variance in the 'fit' score and exhibiting a low average prediction error.
 
-**Comparison of Ranking Methods (TF-IDF vs. Transformer vs. LLM)**
-Upon comparing the combined scores (cosine similarity + weighted ML fit) for the query "Human Resources":
+**✅ Comparison of Ranking Methods (TF-IDF vs. Transformer vs. LLM)**
 
+Upon comparing the combined scores (cosine similarity + weighted ML fit) for the query "Human Resources":
 - TF-IDF + ML Fit: Consistently yielded the lowest combined scores (e.g., "Aspiring Human Resources Specialist" at 0.8496). This method, based on lexical matching, struggles with semantic nuances and often misses relevant candidates that do not contain exact keywords.
   
 - Transformer (MiniLM) + ML Fit: Showed significantly higher scores (e.g., "Aspiring Human Resources Specialist" at 1.2744). This model excels at capturing contextual and semantic meaning, leading to more accurate and comprehensive identification of relevant job titles.
 
 - LLM (paraphrase) + ML Fit: Also produced high scores (e.g., "Aspiring Human Resources Specialist" at 1.1467), demonstrating strong semantic understanding, particularly for paraphrased or related terms. For this specific query, the general-purpose all-MiniLM-L6-v2 performed slightly better than paraphrase-MiniLM-L6-v2 for the top results.
 
-**Key Insight:** Transformer and LLM-based approaches provide superior semantic understanding compared to TF-IDF, leading to higher relevance scores and the ability to identify a broader, more nuanced set of potential candidates, even when job titles use varied phrasing. This enhanced semantic understanding is crucial for effective talent sourcing.
+**✅ 💡 Key Insight**
+- Transformer embeddings dramatically improve matching quality
+- LLMs help capture nuanced job title meaning beyond keywords
+- Hybrid systems (TF-IDF + Transformers + ML) outperform single approaches
+- Human feedback is critical for continuous improvement
+- Ranking systems benefit more from iteration than complexity alone
 
 ## ⚠️ Challenges & Considerations
 - Noisy and inconsistent job titles
@@ -194,14 +199,6 @@ Upon comparing the combined scores (cosine similarity + weighted ML fit) for the
 - Bias introduced via human feedback
 - Balancing semantic vs keyword matching
 - Generalization across job domains
-
----
-## 💡 Key Insight
-Transformer embeddings dramatically improve matching quality
-LLMs help capture nuanced job title meaning beyond keywords
-Hybrid systems (TF-IDF + Transformers + ML) outperform single approaches
-Human feedback is critical for continuous improvement
-Ranking systems benefit more from iteration than complexity alone
 
 ---
 ## 🛠️ Tech Stack
