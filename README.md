@@ -54,7 +54,7 @@ The solution tackles a real-world hiring challenge:
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ System Design Diagram
 
 <center> <img src="data/System design.jpg" alt="System Design Diagram" width="900"></center>
 
