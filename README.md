@@ -163,13 +163,18 @@ The system:
 
 **10. 🎯 Filtering & Output**
 
-Candidates are filtered using:
-- Score thresholds
-- Top-N selection
-- Percentile cutoffs
+- Score Threshold Filtering: A function filter_by_score_threshold is implemented to retain only candidates whose combined score meets a predefined minimum.
+- Top-N Cut-off: The get_top_n_candidates function allows users to retrieve only the top N ranked individuals.
+- Percentile-Based Cut-off: The get_candidates_above_percentile function dynamically filters candidates whose scores fall above a specified percentile, adapting to the score distribution.
+
+
 
 ---
+## Bias Mitigation Strategies
+- The project outlines strategies to prevent human bias, focusing on: diverse training data, transparency in ranking factors, regular model audits, and considering biases in features like location and connections.
+- Robustness through Feedback: The iterative feedback loop is presented as a mechanism for continuous improvement and mitigating initial biases over time.
 
+---
 ## Final output:
 
 - High-quality ranked candidate list
