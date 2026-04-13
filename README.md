@@ -56,7 +56,8 @@ The solution tackles a real-world hiring challenge:
 
 ## 🏗️ System Architecture
 
-![System Design Diagram](assets/images/system-design-diagram.jpeg)
+<center> <img src="data/System design.jpg" alt="System Design Diagram" width="900"></center>
+
 
 ---
 ## 🔄  End-to-End Workflow
