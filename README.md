@@ -73,10 +73,10 @@ Input candidate data:
 **Text Processing**
 - Normalize and clean job titles
 - Tokenization and text standardization
-- 
+  
 **Connection Handling:**
 - The `connection` column is cleaned by converting '500+' entries to 500 and casting the column to an integer type, making it numerically usable.
-- 
+  
 **Location One-Hot Encoding:**
 - The categorical `location` column is transformed using `OneHotEncoder` into a set of binary features, allowing the model to incorporate geographical information.
   
