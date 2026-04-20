@@ -113,16 +113,9 @@ Example:
     - Transformer embeddings
     - Location features
     - Connections (numeric)
- 
-**5. 🤖 Machine Learning Model**
 
-    Model: Random Forest Regressor
-    Target: fit score (0–1)
-    The model learns:
-    Which features indicate strong candidate-role alignment
-    Patterns from historical selections and feedback
 
-**6. 🔍 Query Processing & Semantic Matching**
+**5. 🔍 Query Processing & Semantic Matching**
 
 Example query:
         "Aspiring Human Resources"
@@ -134,7 +127,7 @@ Example query:
         Compared against candidate representations
         Semantic similarity is computed
 
-**7. 📊 Ranking Engine**
+**6. 📊 Ranking Engine**
 
 Final ranking score combines:
 > *Final Score = Similarity Score + (ML Fit Score × Weight)*
@@ -143,14 +136,14 @@ Where:
 Similarity comes from Transformer + TF-IDF matching
 Fit score comes from ML predictions
 
-**8. ⭐ Human Feedback Loop (Key Innovation)**
+**7. ⭐ Human Feedback Loop (Key Innovation)**
 
 Recruiter reviews candidates
 “Stars” an ideal candidate
 This acts as:
 A supervisory signal defining what a “good candidate” looks like
 
-**9. 🔁 Dynamic Re-Ranking (Learning from Feedback)**
+**8. 🔁 Dynamic Re-Ranking (Learning from Feedback)**
 
 After a candidate is starred:
 The system:
@@ -161,7 +154,7 @@ The system:
 
 👉 This transforms the system from static ranking → adaptive intelligence
 
-**10. 🎯 Filtering & Output**
+**9. 🎯 Filtering & Output**
 
 - Score Threshold Filtering: A function filter_by_score_threshold is implemented to retain only candidates whose combined score meets a predefined minimum.
 - Top-N Cut-off: The get_top_n_candidates function allows users to retrieve only the top N ranked individuals.
@@ -187,10 +180,6 @@ The system:
 ---
 
 ## 📈 Performance Benchmarks
-**✅ Machine Learning Model (RandomForestRegressor)**
-- R-squared (R2) Score: 0.8384
-- Root Mean Squared Error (RMSE): 0.0392
-These metrics indicate a strong predictive performance, with the model explaining approximately 83.84% of the variance in the 'fit' score and exhibiting a low average prediction error.
 
 **✅ Comparison of Ranking Methods (TF-IDF vs. Transformer vs. LLM)**
 
