@@ -239,13 +239,19 @@ This will open the application in your web browser, usually at `http://localhost
 -   **Star Candidate:** Select a candidate ID and click "Star Candidate and Re-rank" to mark them as a good fit. The system will then re-rank the candidates, giving more weight to previously starred individuals.
 -   **Reset Feedback:** Clear all user feedback to revert to the initial similarity-based ranking.
 
-## Deployment to Hugging Face Spaces
+### Deployment to Hugging Face Spaces:
 
-The project includes a `Dockerfile` and `requirements.txt` to facilitate deployment on platforms like Hugging Face Spaces. The notebook automates the process of saving necessary files into the `backend_files` directory and uploading them to a specified Hugging Face Space.
+- The project includes a `Dockerfile` and `requirements.txt` to facilitate deployment on platforms like Hugging Face Spaces. The notebook automates the process of saving necessary files into the `backend_files` directory and uploading them to a specified Hugging Face Space.
 ---
-## Conclusion
+###  🙌 Conclusion
 
-This project demonstrates a robust approach to talent sourcing using various NLP techniques. The comparative analysis of vectorization methods highlights the trade-offs between lexical (BoW, TF-IDF) and semantic (Word2Vec, GloVe, FastText, BERT, SBERT) models. The implemented re-ranking mechanism further enhances the system's adaptability and accuracy by incorporating valuable human feedback.
+- This project demonstrates a robust approach to talent sourcing using various NLP techniques. The comparative analysis of vectorization methods highlights the trade-offs between lexical (BoW, TF-IDF) and semantic (Word2Vec, GloVe, FastText, BERT, SBERT) models. The implemented re-ranking mechanism further enhances the system's adaptability and accuracy by incorporating valuable human feedback.
+
+- From a hiring perspective, this project highlights:
+✔ Strong ML + NLP + LLM integration skills
+✔ Real-world system design thinking
+✔ Ability to build production-oriented AI pipelines
+✔ Understanding of ranking systems and feedback learning
 ---
 ## 📌 Future Improvements
 - Fine-tune transformer models on hiring data
@@ -255,22 +261,6 @@ This project demonstrates a robust approach to talent sourcing using various NLP
 - Deploy as an API for ATS integration
 
 ---
-## 🙌 Conclusion
-
-This project demonstrates my ability to:
-
-- Design end-to-end AI systems for real-world problems
-
-- Combine: Machine Learning | Transformers | LLMs | Human feedback loops
-- Build systems that are adaptive, scalable, and intelligent
----
-
-From a hiring perspective, this project highlights:
-
-✔ Strong ML + NLP + LLM integration skills
-✔ Real-world system design thinking
-✔ Ability to build production-oriented AI pipelines
-✔ Understanding of ranking systems and feedback learning
 
 ---
 👤 Author
