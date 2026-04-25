@@ -189,10 +189,10 @@ This will open the application in your web browser, usually at `http://localhost
 - This project demonstrates a robust approach to talent sourcing using various NLP techniques. The comparative analysis of vectorization methods highlights the trade-offs between lexical (BoW, TF-IDF) and semantic (Word2Vec, GloVe, FastText, BERT, SBERT) models. The implemented re-ranking mechanism further enhances the system's adaptability and accuracy by incorporating valuable human feedback.
 
 - From a hiring perspective, this project highlights:
-✔ Strong ML + NLP + LLM integration skills
-✔ Real-world system design thinking
-✔ Ability to build production-oriented AI pipelines
-✔ Understanding of ranking systems and feedback learning
+- ✔ Strong ML + NLP + LLM integration skills
+- ✔ Real-world system design thinking
+- ✔ Ability to build production-oriented AI pipelines
+- ✔ Understanding of ranking systems and feedback learning
 ---
 ## 📌 Future Improvements
 This project lays a strong foundation for talent sourcing, and several areas can be explored for future enhancements:
