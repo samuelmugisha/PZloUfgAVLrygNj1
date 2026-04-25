@@ -171,8 +171,6 @@ streamlit run backend_files/app.py
 ```
 This will open the application in your web browser, usually at `http://localhost:8501`
 
----
-
 ### ✅ Application Features:
 
 -   **Search Query:** Enter a job title or role (e.g., "aspiring human resources", "full-stack software engineer") to get ranked candidates.
