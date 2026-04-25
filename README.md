@@ -62,103 +62,17 @@ The solution tackles a real-world hiring challenge:
 ---
 ## 🔄  End-to-End Workflow
 
-**1. 📥 Data Ingestion**
-Input candidate data:
--  id
--  job_title
--  location
--  connections
+The solution follows a comprehensive workflow to achieve its goals:
 
-**2. 🧹 Data Preprocessing & Feature Engineering**
-**Text Processing**
-- Normalize and clean job titles
-- Tokenization and text standardization
-  
-**Connection Handling:**
-- The `connection` column is cleaned by converting '500+' entries to 500 and casting the column to an integer type, making it numerically usable.
-  
-**Location One-Hot Encoding:**
-- The categorical `location` column is transformed using `OneHotEncoder` into a set of binary features, allowing the model to incorporate geographical information.
-  
-**3. 🧠 Vectorization (Core Innovation)**
-
-The system uses hybrid text representations:
-
-  A. TF-IDF (Lexical Matching)
-    - Captures keyword-level similarity
-    - Useful for exact matches like “HR Intern”
-
-  B. Transformer-based Embeddings
-    - Generated using models like:
-    - Sentence Transformers
-    - BERT-like architectures
-    - Captures semantic meaning
-    
-Example:
-“Talent Acquisition Intern” ≈ “HR Intern”
-
-  C. LLM-powered Representations (Advanced Layer)
-    - Large Language Models enhance:
-    - Context understanding
-    - Role similarity
-    - Ambiguous title interpretation
-    - Helps bridge gaps where keywords fail
-
-👉 This hybrid approach significantly improves candidate matching accuracy.
-
-**4. 🧾 Feature Store**
-
-  All features are combined into a unified feature matrix:
-    - TF-IDF vectors
-    - Transformer embeddings
-    - Location features
-    - Connections (numeric)
-
-
-**5. 🔍 Query Processing & Semantic Matching**
-
-Example query:
-        "Aspiring Human Resources"
-        Processing Steps:
-        Query is encoded using:
-        TF-IDF
-        Transformer embeddings
-        (Optional) LLM-based encoding
-        Compared against candidate representations
-        Semantic similarity is computed
-
-**6. 📊 Ranking Engine**
-
-Final ranking score combines:
-> *Final Score = Similarity Score + (ML Fit Score × Weight)*
-
-Where:
-Similarity comes from Transformer + TF-IDF matching
-Fit score comes from ML predictions
-
-**7. ⭐ Human Feedback Loop (Key Innovation)**
-
-Recruiter reviews candidates
-“Stars” an ideal candidate
-This acts as:
-A supervisory signal defining what a “good candidate” looks like
-
-**8. 🔁 Dynamic Re-Ranking (Learning from Feedback)**
-
-After a candidate is starred:
-The system:
-- Learns from the selected profile
-- Identifies similar candidates using embeddings
-- The model is retrained or adjusted
-- Ranking updates dynamically
-
-👉 This transforms the system from static ranking → adaptive intelligence
-
-**9. 🎯 Filtering & Output**
-
-- Score Threshold Filtering: A function filter_by_score_threshold is implemented to retain only candidates whose combined score meets a predefined minimum.
-- Top-N Cut-off: The get_top_n_candidates function allows users to retrieve only the top N ranked individuals.
-- Percentile-Based Cut-off: The get_candidates_above_percentile function dynamically filters candidates whose scores fall above a specified percentile, adapting to the score distribution.
+1.  **Data Loading & Initial Inspection:** Candidate data is loaded, and initial exploratory data analysis (EDA) is performed to understand its structure, identify missing values, and gain preliminary insights into `connection` and `location` distributions.
+2.  **Text Preprocessing:** The `job_title` column undergoes a rigorous preprocessing pipeline including lowercasing, tokenization, regex-based cleaning, stopword removal, punctuation stripping, and Porter stemming. This ensures consistent and clean text for vectorization.
+3.  **Text Vectorization & Comparison:** Cleaned job titles are transformed into numerical vectors using multiple techniques:
+    *   **Lexical Models:** Bag of Words (BoW) and TF-IDF (Term Frequency-Inverse Document Frequency).
+    *   **Word Embedding Models:** Word2Vec, GloVe, and FastText.
+    *   **Contextual Embedding Models:** BERT and SBERT.
+    Each method is used to rank candidates based on cosine similarity to a search query, and their performance is comparatively analyzed.
+4.  **Re-ranking with User Feedback:** A crucial component, this module allows human feedback (e.g., 'starring' a candidate) to influence subsequent rankings. When a candidate is starred, their 'fit' score is updated, and a combined score (weighted average of similarity and normalized fit) is calculated for re-ranking.
+5.  **Application Deployment:** The entire system is packaged into a Streamlit web application. Essential models (like `tfidf_vectorizer`) and processed dataframes are saved and loaded by the app. The application is deployed to Hugging Face Spaces using a `Dockerfile` and `requirements.txt` for environment setup.
 
 
 
