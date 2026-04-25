@@ -76,7 +76,7 @@ The solution follows a comprehensive workflow to achieve its goals:
 5.  **Application Deployment:** The entire system is packaged into a Streamlit web application. Essential models (like `tfidf_vectorizer`) and processed dataframes are saved and loaded by the app. The application is deployed to Hugging Face Spaces using a `Dockerfile` and `requirements.txt` for environment setup.
 
 ---
-##⚠️ Bias Mitigation Strategies
+## ⚠️ Bias Mitigation Strategies
 Addressing bias is crucial for fair and equitable talent sourcing. While this project focuses on technical ranking, several strategies can be integrated to mitigate bias:
 
 *   **Bias-Aware Data Preparation:** Carefully review and preprocess job titles and other candidate data to identify and potentially neutralize any implicit demographic indicators or biased language that could be inadvertently learned by the models.
