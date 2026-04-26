@@ -23,7 +23,7 @@ The solution tackles a real-world hiring challenge:
 To solve this, the system leverages a combination of:
 
 - Natural Language Processing (NLP)
-- Transformer-based models and LLMs
+- Transformer-based models
 - Human-in-the-loop feedback
 
 The solution tackles a real-world hiring challenge:
