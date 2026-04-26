@@ -57,6 +57,7 @@ The goal of this project is to automate and improve the talent sourcing process.
 
 ## 🏗️ System Design Diagram
 
+<center> <img src="data/SystemDiagram.jpg" alt="System Design Diagram" width="900"></center>
 
 
 ---
