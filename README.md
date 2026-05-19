@@ -29,6 +29,9 @@ To solve this, the system leverages a combination of:
 The solution tackles a real-world hiring challenge:
 
 > *How can we automatically identify the best candidates for a role and continuously improve rankings using human feedback?*
+>
+[![Alt Text]([https://youtube.com](https://www.youtube.com/watch?v=GHsnvSdvRV4))](https://www.youtube.com/watch?v=GHsnvSdvRV4)
+
 
 ---
 
