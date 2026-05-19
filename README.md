@@ -32,6 +32,9 @@ The solution tackles a real-world hiring challenge:
 >
 [![Alt Text]([https://youtube.com](https://www.youtube.com/watch?v=GHsnvSdvRV4))](https://www.youtube.com/watch?v=GHsnvSdvRV4)
 
+[![Watch the video](https://youtube.com)](https://youtube.com/watch?v=GHsnvSdvRV4)
+
+
 
 ---
 
