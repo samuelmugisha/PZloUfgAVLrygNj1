@@ -31,7 +31,7 @@ The solution tackles a real-world hiring challenge:
 > *How can we automatically identify the best candidates for a role and continuously improve rankings using human feedback?*
 >
 
-<video>[![Watch the video](https://youtube.com)](https://youtube.com/watch?v=GHsnvSdvRV4)</video>
+<video>[![Watch the video:AI-Powered Talent Sourcing & Candidate Ranking System](https://youtube.com)](https://youtube.com/watch?v=GHsnvSdvRV4)</video>
 
 
 
