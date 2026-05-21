@@ -210,7 +210,6 @@ This project lays a strong foundation for talent sourcing, and several areas can
 
 
 ---
-👤 Author
+## 👤 Author 
+[Samuel Mugisha D.C | ML Engineer | AI Engineer](https://www.linkedin.com/in/samuelmugishadc/)
 
-Samuel Mugisha
-Machine Learning | AI Systems 
